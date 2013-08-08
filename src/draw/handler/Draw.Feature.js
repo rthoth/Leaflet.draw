@@ -63,6 +63,7 @@ L.Draw.Feature = L.Handler.extend({
 
 	_fireCreatedEvent: function (layer) {
 		this._map.fire('draw:created', { layer: layer, layerType: this.type });
+		this.fire('created', {layer: layer, layerType: this.type });
 	},
 
 	// Cancel drawing when the escape key is pressed
